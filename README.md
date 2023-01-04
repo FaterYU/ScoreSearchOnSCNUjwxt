@@ -7,6 +7,6 @@ A script to search score on SCNU jwxt.
 ```bash
 git clone https://github.com/FaterYU/ScoreSearchOnSCNUjwxt.git
 cd ScoreSearchOnSCNUjwxt
-pip install ./requirements.txt
+pip install -r ./requirements.txt
 python ./SearchScore.py
 ```
