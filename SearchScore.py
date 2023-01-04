@@ -1,6 +1,7 @@
 from requests import session
 from re import findall
 from json import loads,load,dump
+# from os import system
 class Score:
     headers = {
         'User-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.125 Safari/537.36'
@@ -83,3 +84,4 @@ if __name__ == '__main__':
             dump(user,file)
         score = Score(user)
         score.postScore(xnm=user['year'], xqm=user['term'])
+    # system('pause') # windows -> .exe
