@@ -10,3 +10,7 @@ cd ScoreSearchOnSCNUjwxt
 pip install -r ./requirements.txt
 python3 ./SearchScore.py
 ```
+
+## Config
+
+[Config file](./user.json)
