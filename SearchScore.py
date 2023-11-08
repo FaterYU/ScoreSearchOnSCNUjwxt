@@ -40,19 +40,18 @@ class Score:
         a = self.session.get(url=gurl, headers=self.headers)
         logurl=findall('https://sso.scnu.edu.cn/AccountService.*https://jwxt.scnu.edu.cn/sso/oauthLogin',a.text)[0]
         self.session.get(url=logurl, headers=self.headers)
-        self.session.post(
-            url='https://sso.scnu.edu.cn/AccountService/user/login.html',
-            headers=self.headers
-        )
-        self.cookies = self.session.cookies.get_dict()
+
         self.session.post(
             url='https://sso.scnu.edu.cn/AccountService/user/login.html',
             headers=self.headers,
             data=self.user)
+        self.cookies = self.session.cookies.get_dict()
         self.session.get(
             url='https://sso.scnu.edu.cn/AccountService/openapi/onekeyapp.html?app_id=96',
             headers=self.headers,
             cookies=self.cookies)
+        session.get('https://jwxt.scnu.edu.cn/xtgl/login_loginIndex.html', headers=self.headers)
+
 
     def __init__(self,user):
         self.user = {
