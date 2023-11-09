@@ -50,7 +50,9 @@ class Score:
             url='https://sso.scnu.edu.cn/AccountService/openapi/onekeyapp.html?app_id=96',
             headers=self.headers,
             cookies=self.cookies)
-        session.get('https://jwxt.scnu.edu.cn/xtgl/login_loginIndex.html', headers=self.headers)
+        self.session.get(
+            'https://jwxt.scnu.edu.cn/xtgl/login_loginIndex.html', 
+            headers=self.headers)
 
 
     def __init__(self,user):
